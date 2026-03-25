@@ -1,28 +1,13 @@
 import React from 'react';
 import Navbar from './components/Navbar/Navbar';
+import Hero from './components/Hero/Hero';
 
 export default function App() {
   return (
     <div>
       <Navbar />
-      {/* Sample Hero Section to demonstrate transparent/solid scrolling effect */}
-      <section style={{ 
-        height: '100vh', 
-        display: 'flex', 
-        alignItems: 'center', 
-        justifyContent: 'center',
-        flexDirection: 'column',
-        paddingTop: '90px',
-        background: 'linear-gradient(135deg, #152445 0%, #731320 100%)'
-      }}>
-        <h1 style={{ fontSize: '3.5rem', fontWeight: 'bold', color: '#ffffff', marginBottom: '1rem', textAlign: 'center' }}>
-          Welcome to CoEAI
-        </h1>
-        <p style={{ fontSize: '1.2rem', color: '#e0e0e0', maxWidth: '600px', textAlign: 'center' }}>
-          Empowering the future through artificial intelligence, cutting-edge research, and robust academic programs. Scroll down to see the navbar effect.
-        </p>
-      </section>
-      <section style={{ height: '100vh', padding: '100px 10%' }}>
+      <Hero />
+      <section style={{ height: '100vh', padding: '100px 10%', backgroundColor: '#f9f9f9' }}>
         <h2 style={{ fontSize: '2.5rem', color: '#731320' }}>More Content Here</h2>
         <p style={{ marginTop: '20px', lineHeight: '1.6', color: '#333' }}>
           This is just a placeholder section to ensure the page has enough content to scroll. The premium navbar changes its background state globally to ensure contrast on scroll.
