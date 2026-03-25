@@ -47,7 +47,8 @@
 .logoContainer {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
+  flex-shrink: 0;
 }
 
 .iilmLogoWrapper,
@@ -67,26 +68,31 @@
 }
 
 .iilmLogo {
-  height: 55px;
+  max-height: 48px;
+  max-width: 150px;
   width: auto;
+  height: auto;
   object-fit: contain;
   transition: all 0.3s ease;
 }
 
 .coeaiLogo {
-  height: 65px;
+  max-height: 55px;
+  max-width: 100px;
   width: auto;
+  height: auto;
   object-fit: contain;
   transition: all 0.3s ease;
 }
 
 .scrolled .iilmLogo {
-  height: 48px;
-  filter: brightness(0) invert(1);
+  max-height: 42px;
+  max-width: 130px;
 }
 
 .scrolled .coeaiLogo {
-  height: 55px;
+  max-height: 48px;
+  max-width: 90px;
 }
 
 .divider {
@@ -110,7 +116,7 @@
 }
 
 .navLink {
-  color: var(--text-dark);
+  color: var(--text-light);
   font-family: 'Inter', 'Segoe UI', sans-serif;
   font-weight: 600;
   font-size: 15px;
@@ -159,7 +165,7 @@
 .line {
   width: 30px;
   height: 3px;
-  background-color: var(--primary-maroon);
+  background-color: var(--text-light);
   transition: all 0.4s ease;
   border-radius: 3px;
 }
@@ -247,37 +253,39 @@
   }
 
   .iilmLogo {
-    height: 45px;
+    max-height: 40px;
   }
   
   .coeaiLogo {
-    height: 52px;
+    max-height: 48px;
   }
   
   .scrolled .iilmLogo {
-    height: 40px;
+    max-height: 36px;
   }
   
   .scrolled .coeaiLogo {
-    height: 46px;
+    max-height: 42px;
   }
 }
 
 @media (max-width: 480px) {
   .iilmLogo {
-    height: 38px;
+    max-height: 34px;
+    max-width: 100px;
   }
   
   .coeaiLogo {
-    height: 45px;
+    max-height: 40px;
+    max-width: 60px;
   }
   
   .scrolled .iilmLogo {
-    height: 35px;
+    max-height: 30px;
   }
   
   .scrolled .coeaiLogo {
-    height: 40px;
+    max-height: 35px;
   }
   
   .divider {

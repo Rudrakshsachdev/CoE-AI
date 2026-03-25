@@ -8,18 +8,17 @@ export default function App() {
       {/* Sample Hero Section to demonstrate transparent/solid scrolling effect */}
       <section style={{ 
         height: '100vh', 
-        backgroundColor: '#f4f4f4', 
         display: 'flex', 
         alignItems: 'center', 
         justifyContent: 'center',
         flexDirection: 'column',
         paddingTop: '90px',
-        background: 'linear-gradient(135deg, #e0e0e0 0%, #ffffff 100%)'
+        background: 'linear-gradient(135deg, #152445 0%, #731320 100%)'
       }}>
-        <h1 style={{ fontSize: '3.5rem', fontWeight: 'bold', color: '#152445', marginBottom: '1rem', textAlign: 'center' }}>
+        <h1 style={{ fontSize: '3.5rem', fontWeight: 'bold', color: '#ffffff', marginBottom: '1rem', textAlign: 'center' }}>
           Welcome to CoEAI
         </h1>
-        <p style={{ fontSize: '1.2rem', color: '#555', maxWidth: '600px', textAlign: 'center' }}>
+        <p style={{ fontSize: '1.2rem', color: '#e0e0e0', maxWidth: '600px', textAlign: 'center' }}>
           Empowering the future through artificial intelligence, cutting-edge research, and robust academic programs. Scroll down to see the navbar effect.
         </p>
       </section>

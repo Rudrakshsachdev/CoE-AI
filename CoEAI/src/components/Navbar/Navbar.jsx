@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
-import iilmLogo from '../../assets/iilm-logo.png';
+import iilmLogo from '../../assets/iilm-logo1.png';
 import coeaiLogo from '../../assets/coeai.png';
 
 const Navbar = () => {
