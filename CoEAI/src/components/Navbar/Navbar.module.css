@@ -1,0 +1,286 @@
+/* Color Palette Variables */
+:root {
+  --primary-maroon: #731320; /* Extracted deep maroon */
+  --primary-navy: #152445;   /* IILM Blue */
+  --accent-cyan: #0ff; /* Neon bright cyan from CoEAI brain */
+  --navbar-bg-transparent: rgba(115, 19, 32, 0); /* very light tint glass */
+  --navbar-bg-solid: rgba(21, 36, 69, 0.95); /* Deep navy solid */
+  --text-light: #ffffff;
+  --text-dark: #333333;
+}
+
+/* Base Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s ease;
+  background: var(--navbar-bg-transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.scrolled {
+  background: var(--navbar-bg-solid);
+  height: 80px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.15);
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Logos Container */
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.iilmLogoWrapper,
+.coeaiLogoWrapper {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.iilmLogoWrapper:hover,
+.coeaiLogoWrapper:hover {
+  transform: scale(1.03);
+}
+
+.coeaiLogoWrapper:hover {
+  filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.6));
+}
+
+.iilmLogo {
+  height: 55px;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.coeaiLogo {
+  height: 65px;
+  width: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.scrolled .iilmLogo {
+  height: 48px;
+  filter: brightness(0) invert(1);
+}
+
+.scrolled .coeaiLogo {
+  height: 55px;
+}
+
+.divider {
+  width: 2px;
+  height: 40px;
+  background-color: var(--primary-maroon);
+  margin: 0 10px;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.scrolled .divider {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Desktop Menu */
+.desktopMenu {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.navLink {
+  color: var(--text-dark);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  transition: color 0.3s ease;
+  padding: 5px 0;
+}
+
+.scrolled .navLink {
+  color: var(--text-light);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-cyan);
+  transition: width 0.3s ease;
+  box-shadow: 0 0 8px var(--accent-cyan);
+}
+
+.navLink:hover {
+  color: var(--accent-cyan);
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.4);
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+  z-index: 100;
+}
+
+.line {
+  width: 30px;
+  height: 3px;
+  background-color: var(--primary-maroon);
+  transition: all 0.4s ease;
+  border-radius: 3px;
+}
+
+.scrolled .line {
+  background-color: var(--text-light);
+}
+
+/* Hamburger Animations */
+.open .line:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+  background-color: var(--text-light);
+}
+
+.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.open .line:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+  background-color: var(--text-light);
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-maroon) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  clip-path: circle(0px at calc(100% - 40px) 45px);
+  transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  z-index: 40;
+}
+
+.mobileMenuOpen {
+  clip-path: circle(150% at calc(100% - 40px) 45px);
+}
+
+.mobileLinksContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.mobileNavLink {
+  color: var(--text-light);
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.mobileMenuOpen .mobileNavLink {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobileNavLink:hover {
+  color: var(--accent-cyan);
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .desktopMenu {
+    display: none;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+
+  .iilmLogo {
+    height: 45px;
+  }
+  
+  .coeaiLogo {
+    height: 52px;
+  }
+  
+  .scrolled .iilmLogo {
+    height: 40px;
+  }
+  
+  .scrolled .coeaiLogo {
+    height: 46px;
+  }
+}
+
+@media (max-width: 480px) {
+  .iilmLogo {
+    height: 38px;
+  }
+  
+  .coeaiLogo {
+    height: 45px;
+  }
+  
+  .scrolled .iilmLogo {
+    height: 35px;
+  }
+  
+  .scrolled .coeaiLogo {
+    height: 40px;
+  }
+  
+  .divider {
+    height: 30px;
+  }
+}
