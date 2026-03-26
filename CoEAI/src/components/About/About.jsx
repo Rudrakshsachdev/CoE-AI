@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './About.module.css';
+import ShaderAnimation from './ShaderAnimation';
+import './ShaderAnimation.css';
 
 // Intersection Observer Hook for Scroll Animations
 const useScrollReveal = () => {
@@ -56,6 +58,14 @@ const About = () => {
           <p className={styles.description}>
             The CoE AI at IILM University is a premier research and development hub dedicated to advancing the frontiers of Artificial Intelligence. We cultivate cutting-edge innovation, bridge the gap between academic theory and real-world application, and empower students to become the technological leaders of tomorrow.
           </p>
+        </div>
+
+        {/* --- SHADER ANIMATION SHOWCASE --- */}
+        <div className="shaderShowcase">
+          <ShaderAnimation />
+          <div className="shaderOverlay">
+            <h2 className="shaderOverlayText">Building the Future</h2>
+          </div>
         </div>
 
         {/* Vision & Mission */}
