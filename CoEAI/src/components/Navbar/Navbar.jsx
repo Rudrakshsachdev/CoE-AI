@@ -9,12 +9,21 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Prevent scrolling when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [mobileMenuOpen]);
 
   const navLinks = [
     { name: 'Home', href: '#' },
@@ -30,14 +39,15 @@ const Navbar = () => {
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.navbarContainer}>
-        {/* Logos Container */}
+        
+        {/* Logos */}
         <div className={styles.logoContainer}>
-          <a href="#" className={styles.iilmLogoWrapper}>
-            <img src={iilmLogo} alt="IILM University Logo" className={styles.iilmLogo} />
+          <a href="#" className={styles.logoLink}>
+            <img src={iilmLogo} alt="IILM University" className={styles.iilmLogo} />
           </a>
-          <div className={styles.divider}></div>
-          <a href="#" className={styles.coeaiLogoWrapper}>
-            <img src={coeaiLogo} alt="Centre of Excellence AI Logo" className={styles.coeaiLogo} />
+          <div className={styles.logoDivider}></div>
+          <a href="#" className={styles.logoLink}>
+            <img src={coeaiLogo} alt="Centre of Excellence AI" className={styles.coeaiLogo} />
           </a>
         </div>
 
@@ -50,26 +60,36 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Mobile Hamburger Icon */}
-        <div 
+        {/* Mobile Hamburger Toggle */}
+        <button 
           className={`${styles.hamburger} ${mobileMenuOpen ? styles.open : ''}`} 
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle Menu"
         >
-          <div className={styles.line}></div>
-          <div className={styles.line}></div>
-          <div className={styles.line}></div>
-        </div>
+          <span className={styles.hamburgerLine}></span>
+          <span className={styles.hamburgerLine}></span>
+          <span className={styles.hamburgerLine}></span>
+        </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      <div className={`${styles.mobileMenu} ${mobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
+      {/* Mobile Drawer Overlay */}
+      <div 
+        className={`${styles.mobileMenuOverlay} ${mobileMenuOpen ? styles.overlayVisible : ''}`} 
+        onClick={() => setMobileMenuOpen(false)}
+      ></div>
+
+      {/* Mobile Menu Drawer */}
+      <div className={`${styles.mobileMenuDrawer} ${mobileMenuOpen ? styles.drawerOpen : ''}`}>
+        <div className={styles.mobileDrawerHeader}>
+          <img src={coeaiLogo} alt="CoE AI" className={styles.mobileDrawerLogo} />
+        </div>
         <div className={styles.mobileLinksContainer}>
           {navLinks.map((link, index) => (
             <a 
               key={link.name} 
               href={link.href} 
               className={styles.mobileNavLink}
-              style={{ transitionDelay: `${index * 0.1}s` }}
+              style={{ transitionDelay: `${index * 0.05}s` }}
               onClick={() => setMobileMenuOpen(false)}
             >
               {link.name}
