@@ -7,11 +7,11 @@ export const projectsData = [
   {
     id: 1,
     title: "Campus 360",
-    status: "ongoing",
-    tags: ["React", "AI", "Node.js"],
+    status: "completed",
+    tags: ["React", "AI", "Next.js", "Tailwind CSS"],
     shortDesc: "Comprehensive campus management and navigation built with AI optimizations.",
     fullDesc: "Campus 360 is an ambitious project aiming to digitize and optimize campus facilities using intelligent pathing and real-time scheduling APIs. It solves the pain point of fragmented university information systems by consolidating them into one interactive platform.",
-    technologies: ["React.js", "Node.js", "Express", "MongoDB", "Python (ML)"],
+    technologies: ["React.js", "Next.js", "Tailwind CSS"],
     features: [
       "Real-time interactive campus map",
       "AI-driven event recommendations",
@@ -19,8 +19,8 @@ export const projectsData = [
       "Automated attendance tracking"
     ],
     creators: [
-      { name: "Devansh", role: "Full Stack Developer" },
-      { name: "Jasnoor", role: "AI Integration" }
+      { name: "Khushi Diwan", role: "Full Stack Developer" },
+      { name: "Om Rohilla", role: "AI Integration" }
     ],
     github: "#",
     live: "#"
@@ -28,11 +28,11 @@ export const projectsData = [
   {
     id: 2,
     title: "Faculty Connect",
-    status: "ongoing",
-    tags: ["Web", "Database", "UX"],
+    status: "completed",
+    tags: ["React", "Supabase", "Tailwind CSS", "Cloudinary", "Framer Motion", "Vercel", "Google Apps Script API"],
     shortDesc: "Direct portal connecting students to academic faculty and researchers.",
     fullDesc: "Faculty Connect streamlines the communication process between students and academic staff. By using smart matching algorithms, the platform suggests the best faculty members for mentorship based on a student's project interests or research goals.",
-    technologies: ["React", "Firebase", "Tailwind CSS"],
+    technologies: ["React", "Supabase", "Tailwind CSS", "Cloudinary", "Framer Motion", "Vercel", "Google Apps Script API"],
     features: [
       "Smart faculty-student matching",
       "Secure messaging system",
@@ -40,8 +40,8 @@ export const projectsData = [
       "Office hours directory"
     ],
     creators: [
-      { name: "Rudraksh", role: "Lead Frontend" },
-      { name: "Aarav", role: "Backend Developer" }
+      { name: "Rudraksh Sachdeva", role: "AI & Full Stack Developer" },
+      { name: "Yug Prakash", role: "Frontend Developer" }
     ],
     github: "#",
     live: "#"
@@ -49,7 +49,7 @@ export const projectsData = [
   {
     id: 3,
     title: "Mentor-Mentee",
-    status: "completed",
+    status: "ongoing",
     tags: ["ML", "Data", "Web"],
     shortDesc: "A complete ecosystem for tracking and facilitating mentorship at scale.",
     fullDesc: "The Mentor-Mentee platform was built to systematically track mentorship progress, establish KPIs for student success, and ensure that every student has access to guidance. This product has securely managed over 500+ student profiles.",
@@ -61,8 +61,8 @@ export const projectsData = [
       "Historical mentorship data mapping"
     ],
     creators: [
-      { name: "Prof. Anurag", role: "Project Architect" },
-      { name: "Isha", role: "Data Scientist" }
+      { name: "Devansh Datta", role: "Project Architect" },
+      { name: "Sangita", role: "Data Scientist" }
     ],
     github: "#",
     live: "#"
