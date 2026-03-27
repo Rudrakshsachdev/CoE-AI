@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import styles from './ProjectsSection.module.css';
 import ProjectCard from './ProjectCard';
 import ProjectModal from './ProjectModal';
+import HexagonBackground from './HexagonBackground';
 
 export const projectsData = [
   {
@@ -100,7 +101,12 @@ const ProjectsSection = () => {
 
   return (
     <section className={styles.section} id="projects">
-      <div className={styles.bgGlow}></div>
+      {/* Interactive Hexagon Grid Background */}
+      <HexagonBackground 
+        hexagonSize={50} 
+        glowColor="rgba(0, 240, 255, 0.4)" 
+        borderColor="rgba(255, 255, 255, 0.04)"
+      />
       
       <div className={styles.container}>
         

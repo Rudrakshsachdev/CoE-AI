@@ -1,0 +1,70 @@
+.container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  background-color: #050810; /* Project section bg */
+  pointer-events: none; /* Container itself should allow mouse passthrough */
+}
+
+.gridLayer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+}
+
+.hexagon {
+  position: relative;
+  flex-shrink: 0;
+  transition: all 1s;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  pointer-events: auto; /* Required to catch hover interactions */
+}
+
+.hexagon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--border-color);
+  transition: all 1.5s;
+}
+
+.hexagon::after {
+  content: '';
+  position: absolute;
+  inset: var(--margin);
+  background: #050810; 
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: all 0.5s;
+}
+
+/* Hover Physics */
+.hexagon:hover::before {
+  background: var(--glow-color);
+  transition-duration: 0.1s;
+  box-shadow: 0 0 20px var(--glow-color);
+}
+
+.hexagon:hover::after {
+  background: #0f182b; /* Subtle lift color */
+  transition-duration: 0.1s;
+}
+
+/* Overlays */
+.ambientGlow {
+  position: absolute;
+  inset: 0;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 0%, transparent 40%, rgba(5,8,16,0.9) 100%);
+}

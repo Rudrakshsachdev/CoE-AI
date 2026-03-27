@@ -40,6 +40,11 @@
   max-width: 1200px;
   display: flex;
   flex-direction: column;
+  pointer-events: none;
+}
+
+.header, .tabsContainer, .projectsGrid, .emptyState {
+  pointer-events: auto;
 }
 
 /* Header */
