@@ -13,7 +13,9 @@ const ContactSection = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setStatus("Thanks! Your message has been received. We will get back to you shortly.");
+    setStatus(
+      "Thanks! Your message has been received. We will get back to you shortly.",
+    );
 
     if (formRef.current) {
       formRef.current.reset();
@@ -32,7 +34,8 @@ const ContactSection = () => {
             Let&apos;s Build <span>Something Meaningful</span>
           </h2>
           <p className={styles.subtitle}>
-            Reach out for collaborations, student opportunities, workshops, mentorship, or partnership discussions.
+            Reach out for collaborations, student opportunities, workshops,
+            mentorship, or partnership discussions.
           </p>
         </div>
 
@@ -46,8 +49,13 @@ const ContactSection = () => {
 
             <div className={styles.infoCard}>
               <h3>Industry & Partnerships</h3>
-              <a href="mailto:partnerships.coeai@iilm.edu">partnerships.coeai@iilm.edu</a>
-              <p>For corporate collaborations, sponsored labs, and campus initiatives.</p>
+              <a href="mailto:partnerships.coeai@iilm.edu">
+                partnerships.coeai@iilm.edu
+              </a>
+              <p>
+                For corporate collaborations, sponsored labs, and campus
+                initiatives.
+              </p>
             </div>
 
             <div className={styles.infoCard}>
@@ -62,27 +70,55 @@ const ContactSection = () => {
             <form ref={formRef} className={styles.form} onSubmit={handleSubmit}>
               <div className={styles.row}>
                 <label htmlFor="name">Full Name</label>
-                <input id="name" type="text" name="name" required placeholder="Your name" />
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="Your name"
+                />
               </div>
 
               <div className={styles.rowSplit}>
                 <div className={styles.row}>
                   <label htmlFor="email">Email</label>
-                  <input id="email" type="email" name="email" required placeholder="you@example.com" />
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="you@example.com"
+                  />
                 </div>
                 <div className={styles.row}>
                   <label htmlFor="phone">Phone</label>
-                  <input id="phone" type="tel" name="phone" placeholder="+91 XXXXX XXXXX" />
+                  <input
+                    id="phone"
+                    type="tel"
+                    name="phone"
+                    placeholder="+91 XXXXX XXXXX"
+                  />
                 </div>
               </div>
 
               <div className={styles.row}>
                 <label htmlFor="topic">Topic</label>
-                <select id="topic" name="topic" defaultValue="General Inquiry" required>
+                <select
+                  id="topic"
+                  name="topic"
+                  defaultValue="General Inquiry"
+                  required
+                >
                   <option value="General Inquiry">General Inquiry</option>
-                  <option value="Student Opportunity">Student Opportunity</option>
-                  <option value="Research Collaboration">Research Collaboration</option>
-                  <option value="Industry Partnership">Industry Partnership</option>
+                  <option value="Student Opportunity">
+                    Student Opportunity
+                  </option>
+                  <option value="Research Collaboration">
+                    Research Collaboration
+                  </option>
+                  <option value="Industry Partnership">
+                    Industry Partnership
+                  </option>
                 </select>
               </div>
 
