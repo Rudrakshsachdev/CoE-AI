@@ -35,20 +35,6 @@ export const eventsData = [
     highlights: ["Interactive Coding Sessions", "Certificate of Completion", "Access to Recorded Materials"],
     speakers: [{ name: "Dr. Elena Rostova", role: "AI Professor" }],
     registrationLink: "#"
-  },
-  {
-    id: 3,
-    title: "The Future of AGI",
-    status: "completed",
-    tag: "Seminar",
-    shortDesc: "Guest lecture exploring the timeline and implications of AGI.",
-    fullDesc: "An open discussion and seminar discussing Artificial General Intelligence. We explored the current trajectory of large language models, regulatory frameworks, and what it means for the future workforce.\n\nThe event concluded with a 45-minute Q&A session with our esteemed guest.",
-    date: "September 12, 2026",
-    location: "Auditorium 1",
-    mainImage: seminarImg,
-    highlights: ["Recorded Session Available", "Over 500 Attendees"],
-    speakers: [{ name: "Dr. Jonathan Hayes", role: "Industry AI Leader" }],
-    registrationLink: null
   }
 ];
 
