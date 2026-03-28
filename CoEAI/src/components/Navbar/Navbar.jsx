@@ -31,7 +31,7 @@ const Navbar = () => {
     { name: 'Team', href: '#' },
     { name: 'Work', href: '#' },
     { name: 'Programs', href: '#' },
-    { name: 'Events', href: '#' },
+    { name: 'Events', href: '#events' },
     { name: 'Collaborations', href: '#' },
     { name: 'Contact', href: '#' },
   ];

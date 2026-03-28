@@ -4,6 +4,7 @@ import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import TeamSection from './components/Team/TeamSection';
 import ProjectsSection from './components/Projects/ProjectsSection';
+import EventsSection from './components/Events/EventsSection';
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <About />
       <TeamSection />
       <ProjectsSection />
+      <EventsSection />
     </div>
   )
 }
