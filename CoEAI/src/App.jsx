@@ -7,6 +7,7 @@ import ProjectsSection from "./components/Projects/ProjectsSection";
 import OpportunitiesSection from "./components/Opportunities/OpportunitiesSection";
 import EventsSection from "./components/Events/EventsSection";
 import CompletedEventsSection from "./components/CompletedEvents/CompletedEventsSection";
+import ContactSection from "./components/Contact/ContactSection";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
       <OpportunitiesSection />
       <EventsSection />
       <CompletedEventsSection />
+      <ContactSection />
     </div>
   );
 }
